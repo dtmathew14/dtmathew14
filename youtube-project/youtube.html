@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Youtube.com Clone</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/general.css">
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/video.css">
+<link rel="stylesheet" href="styles/sidebar.css">
+</head>
+<body>
+  <div class="header">
+    <div class="left-section">
+      <img class="hamburger-menu" src="icons/hamburger-menu.svg">
+      <img class="youtube-logo" src="icons/youtube-logo.svg">
+    </div>
+    <div class="middle-section">
+      <input class='searchbar' type="text" placeholder="search">
+      <button class="search-button">
+        <img class ="search-icon" src="icons/search.svg">
+        <div class="tooltip">Search</div>
+      </button>
+      <button class="voice-search-button">
+        <img class ="voice-search-icon" src="icons/voice-search-icon.svg">
+        <div class="tooltip">Search with your voice</div>
+      </button>
+    </div>
+    <div class="right-section">
+      <div class="upload-icon-container">
+        <img class="upload-icon" src="icons/upload.svg">
+        <div class="tooltip">Create</div>
+      </div>
+      <div class="apps-icon-container">
+        <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+        <div class="tooltip">Apps</div>
+      </div>
+      
+      <div class="notify-icon-container" >
+        <div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="notifications-count" >6</div>
+          <div class="tooltip">6 notifications</div>
+        </div>
+      </div>
+      
+      <div class="profile-icon-container">
+        <img class="current-user-picture" src="icons/my-channel.png">
+        <div class="tooltip">My profile</div>
+      </div>
+      
+    </div>
+  </div> 
+
+  <div class="sidebar">
+    <div class="sidebar-link">
+      <img src="icons/home.svg">
+      <div>Home</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="icons/explore.svg">
+      <div>Explore</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="icons/subscriptions.svg">
+      <div>Subscriptions</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="icons/originals.svg">
+      <div>Originals</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="icons/youtube-music.svg">
+      <div>Music</div>
+    </div>
+    <div class="sidebar-link">
+      <img src="icons/library.svg">
+      <div>Library</div>
+    </div>
+  </div>
+    
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/google.jpeg">
+          <div class="video-time"> 14:20</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/brownlee.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with Google CEO Sundar Pachai!
+            </p>
+            <p class="video-author">
+              Marques Browlee
+            </p>
+            <p class="video-stats">
+              3.4M views · 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/sidemen.jpeg">
+          <div class="video-time"> 11:33</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/miniminter.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              THE ULTIMATE SIDEMEN Q&A!!!! 
+            </p>
+            <p class="video-author">
+              Miniminter
+            </p>
+            <p class="video-stats">
+              9.1M views · 7 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/madrid.jpeg">
+          <div class="video-time"> 1:15:05</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/laliga.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              FC Barcelona vs Real Madrid (1-2) Matchday 31 2015/2016 - FULL MATCH
+            </p>
+            <p class="video-author">
+              LaLiga
+            </p>
+            <p class="video-stats">
+              7.8M views · 2 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/neetcode.png">
+          <div class="video-time"> 10:30</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/neetcode-profile.png">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Generate parentheses - Stack - Leetcode 22
+            </p>
+            <p class="video-author">
+              Neetcode
+            </p>
+            <p class="video-stats">
+              180K views · 2 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/federer.jpeg">
+          <div class="video-time"> 8:54</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/vogue.png">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              73 questions with Roger Federer!
+            </p>
+            <p class="video-author">
+              VOGUE
+            </p>
+            <p class="video-stats">
+              5.5M views · 4 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnails/charles.jpeg">
+          <div class="video-time"> 3:13</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile" src="channel-profiles/ufc.png">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Charles Olivera ringside interview UFC 289
+            </p>
+            <p class="video-author">
+              UFC
+            </p>
+            <p class="video-stats">
+              2.2M views · 5 months ago
+            </p>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+</body>
+</html>
+
