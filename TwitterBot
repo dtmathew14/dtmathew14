@@ -1,0 +1,52 @@
+import tweepy
+import time
+
+# placeholders for the keys just for github
+CONSUMER_KEY = "consumer_key"
+CONSUMER_SECRET = "consumer_secret"
+ACCESS_TOKEN = "access_token"
+ACCESS_TOKEN_SECRET = "access_token_secret"
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+api = tweepy.API(auth)
+
+def post_tweet(tweet_text):
+    try:
+        api.update_status(status=tweet_text)
+        print("Tweet posted successfully!")
+    except tweepy.TweepError as e:
+        print("Error posting tweet:", e)
+
+# Function to respond to mentions
+def respond_to_mentions():
+    mentions = api.mentions_timeline()
+
+    for mention in mentions:
+        if mention.in_reply_to_status_id is None:
+            user = mention.user.screen_name
+            tweet_id = mention.id
+            response_text = f"Hi @{user}, thank you for mentioning me! This is an automated response. #TwitterBot"
+            
+            try:
+                api.update_status(status=response_text, in_reply_to_status_id=tweet_id)
+                print(f"Response to @{user} sent successfully!")
+            except tweepy.TweepError as e:
+                print("Error responding to mention:", e)
+
+# Function to retweet tweets with a specific hashtag
+def retweet_hashtag_tweets(hashtag):
+    tweets = tweepy.Cursor(api.search, q=hashtag, result_type="recent").items(5)
+    
+    for tweet in tweets:
+        try:
+            tweet.retweet()
+            print("Retweeted:", tweet.text)
+        except tweepy.TweepError as e:
+            print("Error retweeting:", e)
+
+# Post a tweet
+post_tweet("Hello, this is my Twitter bot! #Python #TwitterBot")
+
+while True:
+    respond_to_mentions()
+    time.sleep(60)  # Wait for 60 seconds
